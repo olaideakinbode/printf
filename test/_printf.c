@@ -1,9 +1,12 @@
 #include "main.h"
+#include <stddef.h>
 #include <stdarg.h>
 
 int _printf(const char *format, ...);
 {
-	int i = 0;
+	int i = 0, j;
+	char *new_str = NULL;
+
 	va_list args;
 
 	va_start(args, format);
@@ -19,8 +22,19 @@ int _printf(const char *format, ...);
 				_putchar(va_args(args, int));
 				i++;
 			}
+			else if (format[i + 1] == 's')
+			{
+				i++;
+				new_str = va_arg(args, char *);
+				j = 0;
+				while (new_str[j] != '\0')
+				{
+					_putchar(new_str[j]);
+					j++
+				}
+			
+			}
 		}
-		i++;
 	}
 	va_end(args);
 	return (0);
