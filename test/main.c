@@ -1,4 +1,4 @@
-#include "../main.h"
+#include "main.h"
 #include <stdio.h>
 
 /**
@@ -8,7 +8,7 @@
 
 int main(void)
 {
-	_print("Her name starts with %c\n", 'M');
-	print("Her name starts with %c\n", 'M');
+	_printf("Her name starts with %c\n", 'M');
+	printf("Her name starts with %c\n", 'M');
 	return (0);
 }

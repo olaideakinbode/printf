@@ -14,7 +14,7 @@ int _printf(const char *format, ...);
 			_putchar(format[i]);
 		else
 		{
-			if (format[i + 1] == 'c)
+			if (format[i + 1] == 'c')
 			{
 				_putchar(va_args(args, int));
 				i++;
