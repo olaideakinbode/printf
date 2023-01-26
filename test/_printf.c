@@ -2,7 +2,7 @@
 #include <stddef.h>
 #include <stdarg.h>
 
-int _printf(const char *format, ...);
+int _printf(const char *format, ...)
 {
 	int i = 0, j;
 	char *new_str = NULL;
