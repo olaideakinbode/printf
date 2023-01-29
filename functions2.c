@@ -67,7 +67,7 @@ int print_non_printable(va_list types, char buffer[],
 		int flags, int width, int precision, int size)
 {
 	int i = 0, offset = 0;
-	char *str = va_args(types, char *);
+	char *str = va_arg(types, char *);
 
 	UNUSED(flags);
 	UNUSED(width);
@@ -156,7 +156,7 @@ int print_rot13strin(va_list types, char buffer[],
 	str = va_arg(types, char *);
 
 	UNUSED(buffer);
-	UNUSE(flags);
+	UNUSED(flags);
 	UNUSED(width);
 	UNUSED(precision);
 	UNUSED(size);
